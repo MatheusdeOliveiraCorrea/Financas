@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ativosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,9 +38,9 @@
             this.fundosInvestimentoImobiliarioFIIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.telaPrincipal = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.painelBotoesLaterais = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -57,8 +57,8 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAtivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.sidebar.SuspendLayout();
+            this.telaPrincipal.SuspendLayout();
+            this.painelBotoesLaterais.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -104,9 +104,9 @@
             this.grdAtivos.MultiSelect = false;
             this.grdAtivos.Name = "grdAtivos";
             this.grdAtivos.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            this.grdAtivos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            this.grdAtivos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grdAtivos.Size = new System.Drawing.Size(785, 170);
             this.grdAtivos.TabIndex = 3;
             this.grdAtivos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAtivos_CellDoubleClick);
@@ -124,14 +124,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // panel1
+            // telaPrincipal
             // 
-            this.panel1.Controls.Add(this.grdAtivos);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(316, 78);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 530);
-            this.panel1.TabIndex = 5;
+            this.telaPrincipal.Controls.Add(this.grdAtivos);
+            this.telaPrincipal.Controls.Add(this.comboBox1);
+            this.telaPrincipal.Location = new System.Drawing.Point(269, 62);
+            this.telaPrincipal.Name = "telaPrincipal";
+            this.telaPrincipal.Size = new System.Drawing.Size(877, 563);
+            this.telaPrincipal.TabIndex = 5;
             // 
             // label1
             // 
@@ -144,21 +144,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Bem-Vindo Matheus! ";
             // 
-            // sidebar
+            // painelBotoesLaterais
             // 
-            this.sidebar.BackColor = System.Drawing.Color.Black;
-            this.sidebar.Controls.Add(this.panel2);
-            this.sidebar.Controls.Add(this.panel3);
-            this.sidebar.Controls.Add(this.panel4);
-            this.sidebar.Controls.Add(this.panel5);
-            this.sidebar.Controls.Add(this.panel6);
-            this.sidebar.Controls.Add(this.panel7);
-            this.sidebar.Location = new System.Drawing.Point(0, 27);
-            this.sidebar.MaximumSize = new System.Drawing.Size(263, 598);
-            this.sidebar.MinimumSize = new System.Drawing.Size(58, 605);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(263, 605);
-            this.sidebar.TabIndex = 7;
+            this.painelBotoesLaterais.BackColor = System.Drawing.Color.Black;
+            this.painelBotoesLaterais.Controls.Add(this.panel2);
+            this.painelBotoesLaterais.Controls.Add(this.panel3);
+            this.painelBotoesLaterais.Controls.Add(this.panel4);
+            this.painelBotoesLaterais.Controls.Add(this.panel5);
+            this.painelBotoesLaterais.Controls.Add(this.panel6);
+            this.painelBotoesLaterais.Controls.Add(this.panel7);
+            this.painelBotoesLaterais.Location = new System.Drawing.Point(0, 27);
+            this.painelBotoesLaterais.MaximumSize = new System.Drawing.Size(263, 598);
+            this.painelBotoesLaterais.MinimumSize = new System.Drawing.Size(58, 605);
+            this.painelBotoesLaterais.Name = "painelBotoesLaterais";
+            this.painelBotoesLaterais.Size = new System.Drawing.Size(263, 605);
+            this.painelBotoesLaterais.TabIndex = 7;
             // 
             // panel2
             // 
@@ -177,9 +177,9 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(-3, -3);
+            this.btnMenu.Location = new System.Drawing.Point(-6, -3);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(263, 44);
+            this.btnMenu.Size = new System.Drawing.Size(280, 61);
             this.btnMenu.TabIndex = 8;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -253,6 +253,7 @@
             this.btnConfiguracoes.TabIndex = 0;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
             // panel6
             // 
@@ -312,20 +313,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1146, 637);
-            this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.painelBotoesLaterais);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.telaPrincipal);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.Text = "Financas";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAtivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.sidebar.ResumeLayout(false);
+            this.telaPrincipal.ResumeLayout(false);
+            this.painelBotoesLaterais.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -346,9 +349,9 @@
         private System.Windows.Forms.BindingSource fundosInvestimentoImobiliarioFIIBindingSource;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel telaPrincipal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel sidebar;
+        private System.Windows.Forms.FlowLayoutPanel painelBotoesLaterais;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnTelaInicial;

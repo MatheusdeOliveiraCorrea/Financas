@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Principal.Models
+﻿namespace NucleoRegras.Models
 {
     public class FundosInvestimentoImobiliarioFII
     {
@@ -22,8 +15,10 @@ namespace Principal.Models
         public int Quantidade { get; set; }
 
         public double Dividendos { get; set; }
+
     }
 }
+
 /*
   
 "kind": "fii",

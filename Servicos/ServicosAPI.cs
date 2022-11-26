@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Principal.Models;
+using NucleoRegras.Models;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace Principal
+namespace ServicosExternos
 {
     /*
             HttpResponseMessage response = client.GetAsync(url).Result;

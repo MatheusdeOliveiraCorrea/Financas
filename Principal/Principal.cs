@@ -1,4 +1,5 @@
-﻿using Principal.Models;
+﻿using NucleoRegras.Models;
+using ServicosExternos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -22,6 +23,20 @@ namespace Principal
 
             //var Form1 = new Form1();
             //Form1.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            foreach (Control controle in this.Controls)
+            {
+                if (controle is MdiClient)
+                {
+                    controle.BackColor = Color.FromArgb((int)(byte)22, (int)(byte)24, (int)(byte)26);
+                    break;
+                }
+            }
+
+            //this.telaPrincipal.BackColor = Color.FromArgb((int)(byte)22, (int)(byte)24, (int)(byte)26);
         }
 
         private void AjustarControles()
@@ -49,7 +64,7 @@ namespace Principal
         private void FormatarColunas()
         {
             grdAtivos.Columns["Preco"].DefaultCellStyle.Format = "c";
-            grdAtivos.Columns["Preco"].DefaultCellStyle.ForeColor = System.Drawing.Color.Green;
+            grdAtivos.Columns["Preco"].DefaultCellStyle.ForeColor = Color.Green;
 
             grdAtivos.AllowUserToResizeColumns = false;
         }
@@ -98,8 +113,8 @@ namespace Principal
         {
             if (sidebarexpand)
             {
-                sidebar.Width -= 25; 
-                if(sidebar.Width == sidebar.MinimumSize.Width)
+                painelBotoesLaterais.Width -= 25; 
+                if(painelBotoesLaterais.Width == painelBotoesLaterais.MinimumSize.Width)
                 {
                     sidebarexpand = false;
                     sidebarTimer.Stop(); 
@@ -107,8 +122,8 @@ namespace Principal
             }
             else
             {
-                sidebar.Width += 25;
-                if(sidebar.Width == sidebar.MaximumSize.Width)
+                painelBotoesLaterais.Width += 25;
+                if(painelBotoesLaterais.Width == painelBotoesLaterais.MaximumSize.Width)
                 {
                     sidebarexpand = true;
                     sidebarTimer.Stop();
@@ -123,8 +138,8 @@ namespace Principal
 
         private void grdAtivos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var ad = new Form1();
-            ad.ShowDialog();
+            //var ad = new Form1();
+            //ad.ShowDialog();
         }
 
         private void VisualizacaoMouseEnter(object sender, EventArgs e)
@@ -136,5 +151,12 @@ namespace Principal
         {
             btnVisualizacao.ForeColor = Color.Azure;
         }
+
+        private void btnConfiguracoes_Click(object sender, EventArgs e)
+        {
+            new MDIParent1().Show();
+        }
+
+
     }
 }
