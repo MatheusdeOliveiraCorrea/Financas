@@ -35,7 +35,6 @@
             this.ativosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grdAtivos = new System.Windows.Forms.DataGridView();
-            this.fundosInvestimentoImobiliarioFIIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,9 +53,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnVisualizacao = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.fundosInvestimentoImobiliarioFIIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAtivos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +64,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -177,9 +177,9 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(-3, -3);
+            this.btnMenu.Location = new System.Drawing.Point(-10, -3);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(263, 44);
+            this.btnMenu.Size = new System.Drawing.Size(287, 44);
             this.btnMenu.TabIndex = 8;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -253,6 +253,7 @@
             this.btnConfiguracoes.TabIndex = 0;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
             // panel6
             // 
@@ -323,7 +324,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAtivos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -332,6 +332,7 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fundosInvestimentoImobiliarioFIIBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

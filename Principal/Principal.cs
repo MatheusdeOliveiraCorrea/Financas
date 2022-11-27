@@ -1,8 +1,10 @@
-﻿using Principal.Models;
+﻿using Nucleo.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using ServicosExternos.Fabrica.API;
+using System.Drawing.Text;
 
 namespace Principal
 {
@@ -19,9 +21,6 @@ namespace Principal
             PreencherGrid();
             AjustarOrdemColunas();
             AjustarControles();
-
-            //var Form1 = new Form1();
-            //Form1.Show();
         }
 
         private void AjustarControles()
@@ -84,9 +83,11 @@ namespace Principal
         {
             try
             {
-                var financeApi = new ServicosAPI();
-                var fii = financeApi.BuscarFII(codigoFII);
-                ListaFII.Add(fii);
+                var construtor = new ConstrutorAPI();
+
+                var fii = construtor.CriarAPI();
+
+                ListaFII.Add(fii.BuscarFII(codigoFII));
             }
             catch (Exception)
             {
@@ -123,8 +124,6 @@ namespace Principal
 
         private void grdAtivos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var ad = new Form1();
-            ad.ShowDialog();
         }
 
         private void VisualizacaoMouseEnter(object sender, EventArgs e)
@@ -135,6 +134,11 @@ namespace Principal
         private void DefinirCorBotao(Button btn, Color cor)
         {
             btnVisualizacao.ForeColor = Color.Azure;
+        }
+
+        private void btnConfiguracoes_Click(object sender, EventArgs e)
+        {
+            new Configuracoes().Show();
         }
     }
 }
